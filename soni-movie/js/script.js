@@ -51,7 +51,7 @@ $('#search-input').on('key-up', function(event) {
 
 $('#movie-list').on('click','.see-detail', function(){
     $.ajax({
-        url:"https://www.omdbapi.com",
+        url:"https://www.omdbapi.com/",
         type : "get",
         dataType : "json",
         data :{
@@ -73,7 +73,7 @@ $('#movie-list').on('click','.see-detail', function(){
                         <li class="list-group-item">Genre :`+ movie.Genre+`</li>
                         <li class="list-group-item">Director :`+ movie.Director+`</li>
                         <li class="list-group-item">Actor :`+ movie.Actors+`</li>
-                        <li class="list-group-item">Rating :`+ movie.Ratings+`</li>    
+                        <li class="list-group-item">Rating :`+ movie.Ratings[0].Value +`</li>    
                       </ul>
                         </div>
                     </div>
